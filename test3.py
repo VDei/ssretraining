@@ -1,7 +1,7 @@
 # 1. Написати функцію to_minutes, яка для заданого числа годин повертає кількість хвилин. Наприклад, to_minutes(1.5) поверне 90.
 
 def to_minutes(hours):
-    print(hours * 60)
+    return hours * 60
 
 to_minutes(1.5)
 
@@ -10,7 +10,7 @@ to_minutes(1.5)
 # Наприклад, to_hours(12) повертає 0.2, to_hours(5) повертає 0.0833.
 
 def to_hours(minutes):
-    print(round((minutes / 60), 4))
+    return round((minutes / 60), 4)
 
 to_hours(12)
 to_hours(5)
@@ -20,9 +20,9 @@ to_hours(5)
 
 def is_whole_div(num1, num2):
     if num1 % num2 == 0:
-        print(True)
+        return True
     else:
-        print(False)
+        return False
 
 is_whole_div(2, 3)
 is_whole_div(12, 3)
