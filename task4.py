@@ -14,14 +14,24 @@ def stat(some_array):
     # (4) and (5) both in a list
     # (4) - It is (or they are) the element(s) that has (or have) the maximum occurrence.
     # If there are more than one, the elements should be sorted (by their value obviously)
-    max_occurance_elements =
-
     # (5) - Maximum occurrence of the integer(s)
-    max_occurance =
+    element_counts = {}
+    for element in some_array:
+        if element in element_counts:
+            element_counts[element] += 1
+        else:
+            element_counts[element] = 1
+    max_count = max(element_counts.values())
+    max_occurance_elements = [
+        element for element, count in element_counts.items() if count == max_count
+    ]
+    max_occurance = [
+        count for element, count in element_counts.items() if count == max_count
+    ]
 
     return [
         total_amount,
         unique_amount,
         once_occure_amount,
-        [[max_occurance_elements], max_occurance],
+        [[max_occurance_elements], max_occurance]
     ]
