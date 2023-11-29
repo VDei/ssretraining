@@ -1,5 +1,5 @@
 import pytest
-from test3 import to_minutes, to_hours, is_whole_div
+from task3 import to_minutes, to_hours, is_whole_div
 
 def test_to_minutes():
     assert to_minutes(1.5) == 90
