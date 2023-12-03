@@ -1,6 +1,7 @@
 # написати функцію stat, яка отримує масив цілих чисел, а повертає масив,
 # [total_amount, unique_amount, once_occure_amount, [[max_occurance_elements], max_occurance]]
 
+
 def stat(some_array):
     # (1) - Total amount of received integers.
     total_amount = len(some_array)
@@ -33,5 +34,9 @@ def stat(some_array):
         total_amount,
         unique_amount,
         once_occure_amount,
-        [[max_occurance_elements], max_occurance]
+        [max_occurance_elements, max_occurance],
     ]
+
+
+# sa = (1, 1, 2, 3, 34, 4, 5, 4, 5, 4, 55, 5, 5, 5)
+# print(stat(sa))
