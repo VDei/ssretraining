@@ -10,3 +10,20 @@
 def convert(string_of_digits, n):
     if n <= 0 or n > len(string_of_digits) or len(string_of_digits) == 0:
         return ""
+
+    digits = [
+        string_of_digits[i : i + n]
+        for i in range(0, len(string_of_digits) - len(string_of_digits) % n, n)
+    ]
+
+    def cubes(cut_string):
+        sum_of_cubes = sum(int(digit) ** 3 for digit in cut_string)
+        if sum_of_cubes % 2 == 0:
+            return cut_string[::-1]
+        else:
+            return cut_string[1:] + cut_string[0]
+
+    return "".join(cubes(cut_string) for cut_string in digits)
+
+
+# print(convert("123456987654", 6))
